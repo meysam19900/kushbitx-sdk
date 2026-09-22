@@ -1,0 +1,18 @@
+{
+  "requestId": "req-1790096094324",
+  "agentId": "kushbit-sdk-meysam",
+  "chain": "base",
+  "asset": "USDC",
+  "amount": "1.00",
+  "recipient": "0x0d68028d06af13379C872FEE032568B4Be712f22",
+  "verdict": "ALLOW",
+  "requiresHumanApproval": false,
+  "evaluationTimestamp": "2026-09-22T16:54:55.792Z",
+  "policyEvaluation": {
+    "recipientCheck": "PASSED",
+    "perTransactionLimitCheck": "PASSED",
+    "dailyBudgetCheck": "PASSED",
+    "remainingBudgetAfterTx": "19.00"
+  },
+  "status": "EVALUATED_OFFLINE_FALLBACK"
+}
