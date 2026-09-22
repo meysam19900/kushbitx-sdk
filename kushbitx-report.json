@@ -1,0 +1,47 @@
+{
+  "version": "spendguard-preview-1",
+  "agentId": "example-agent",
+  "requestId": "example-1790077598811",
+  "chain": "base",
+  "asset": "USDC",
+  "recipient": "0x0d68028d06af13379c872fee032568b4be712f22",
+  "amount": "1.00",
+  "decision": "APPROVE",
+  "findings": [],
+  "policy": {
+    "maxPerTransaction": "5.00",
+    "remainingDailyBudget": "20.00",
+    "requireHumanAbove": "2.00",
+    "maxRepeats": 1,
+    "recipientKnown": true,
+    "blockUnknownRecipients": true,
+    "applyAgentProof": true
+  },
+  "context": {
+    "repeatCount": 0,
+    "agentProofDecision": "ALLOW"
+  },
+  "checkedAt": "2026-09-22T11:46:44.271Z",
+  "decisionId": "0x4cc96ce97cb91a6019be6b8c894a956395cffd1034d7378828771f7fd0000886",
+  "advisory": true,
+  "executionAuthorized": false,
+  "paidOptions": [
+    {
+      "id": "transaction-preflight",
+      "endpoint": "/api/transaction-preflight",
+      "priceUsdc": "0.05",
+      "purpose": "Simulate the unsigned Base transaction and inspect approvals before signing.",
+      "requiresExplicitPayment": true,
+      "autoCharge": false
+    },
+    {
+      "id": "token-risk",
+      "endpoint": "/api/token-risk",
+      "priceUsdc": "0.25",
+      "purpose": "Run live token contract, ownership and market-risk checks for a Base token address.",
+      "requiresExplicitPayment": true,
+      "autoCharge": false
+    }
+  ],
+  "note": "This stateless preview does not hold keys, execute a payment or prove that caller-supplied policy and risk inputs are trusted. Enforce the decision in a separate signer or approval service."
+}
